@@ -1,0 +1,35 @@
+<div class="container mt-4">
+    <h3>Asociar Conductor</h3>
+    <form (ngSubmit)="asociarConductor()">
+      <div class="mb-3">
+        <label for="conductor" class="form-label">Conductor</label>
+        <select
+          id="conductor"
+          class="form-control"
+          [(ngModel)]="conductorSeleccionado"
+          name="conductor"
+          required
+        >
+          <option *ngFor="let conductor of conductores" [ngValue]="conductor">
+            {{ conductor.nombre }} {{ conductor.apellido }}
+          </option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="vehiculo" class="form-label">Vehículo</label>
+        <select
+          id="vehiculo"
+          class="form-control"
+          [(ngModel)]="vehiculoSeleccionado"
+          name="vehiculo"
+          required
+        >
+          <option *ngFor="let vehiculo of vehiculosNoAsignados" [ngValue]="vehiculo">
+            {{ vehiculo.placa }} - {{ vehiculo.modelo }}
+          </option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Asociar</button>
+    </form>
+  </div>
+  

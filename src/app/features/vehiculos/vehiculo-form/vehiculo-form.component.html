@@ -1,0 +1,40 @@
+<div class="container mt-4">
+    <h3>Registrar Vehículo</h3>
+    <form (ngSubmit)="guardarVehiculo()">
+      <div class="mb-3">
+        <label for="placa" class="form-label">Placa</label>
+        <input
+          type="text"
+          id="placa"
+          class="form-control"
+          [(ngModel)]="vehiculo.placa"
+          name="placa"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="modelo" class="form-label">Modelo</label>
+        <input
+          type="text"
+          id="modelo"
+          class="form-control"
+          [(ngModel)]="vehiculo.modelo"
+          name="modelo"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="capacidad" class="form-label">Capacidad</label>
+        <input
+          type="text"
+          id="capacidad"
+          class="form-control"
+          [(ngModel)]="vehiculo.capacidad"
+          name="capacidad"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar Vehículo</button>
+    </form>
+  </div>
+  

@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { ConductorService } from './core/services/conductor.service';
+import { VehiculoService } from './core/services/vehiculo.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  providers: [ConductorService, VehiculoService],
+  imports: [RouterModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'front_prueba';
+  title = 'transporte-app';
 }

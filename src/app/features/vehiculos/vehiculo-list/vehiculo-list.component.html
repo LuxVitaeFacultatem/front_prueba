@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <h3>Lista de Vehículos</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Placa</th>
+          <th>Modelo</th>
+          <th>Capacidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehiculo of vehiculos">
+          <td>{{ vehiculo.placa }}</td>
+          <td>{{ vehiculo.modelo }}</td>
+          <td>{{ vehiculo.capacidad }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

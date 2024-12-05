@@ -1,0 +1,24 @@
+<div class="container mt-4">
+    <h3>Lista de Conductores</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Identificación</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Teléfono</th>
+          <th>Dirección</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let conductor of conductores">
+          <td>{{ conductor.identificacion }}</td>
+          <td>{{ conductor.nombre }}</td>
+          <td>{{ conductor.apellido }}</td>
+          <td>{{ conductor.telefono }}</td>
+          <td>{{ conductor.direccion }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

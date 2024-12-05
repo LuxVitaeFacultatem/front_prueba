@@ -1,0 +1,43 @@
+<div class="container mt-4">
+    <h3>Desasociar Conductor</h3>
+    <div>
+      <label for="conductor">Conductor:</label>
+      <select
+        id="conductor"
+        [(ngModel)]="conductorSeleccionado"
+        (change)="cargarVehiculosAsignados()"
+        class="form-select"
+      >
+        <option *ngFor="let conductor of conductores" [ngValue]="conductor">
+          {{ conductor.nombre }} {{ conductor.apellido }}
+        </option>
+      </select>
+    </div>
+    <div *ngIf="vehiculosAsignados.length > 0" class="mt-3">
+      <h4>Vehículos Asignados</h4>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Placa</th>
+            <th>Modelo</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vehiculo of vehiculosAsignados">
+            <td>{{ vehiculo.placa }}</td>
+            <td>{{ vehiculo.modelo }}</td>
+            <td>
+              <button
+                (click)="desasociarVehiculo(vehiculo)"
+                class="btn btn-danger btn-sm"
+              >
+                Desasociar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

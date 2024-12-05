@@ -1,0 +1,27 @@
+<div class="container mt-4">
+    <h3>Registrar Conductor</h3>
+    <form (ngSubmit)="registrarConductor()">
+      <div class="mb-3">
+        <label for="identificacion">Identificación:</label>
+        <input [(ngModel)]="conductor.identificacion" id="identificacion" name="identificacion" required class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="nombre">Nombre:</label>
+        <input [(ngModel)]="conductor.nombre" id="nombre" name="nombre" required class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="apellido">Apellido:</label>
+        <input [(ngModel)]="conductor.apellido" id="apellido" name="apellido" required class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="telefono">Teléfono:</label>
+        <input [(ngModel)]="conductor.telefono" id="telefono" name="telefono" required class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="direccion">Dirección:</label>
+        <input [(ngModel)]="conductor.direccion" id="direccion" name="direccion" required class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+  </div>
+  
